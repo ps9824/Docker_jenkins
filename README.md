@@ -41,3 +41,58 @@ To get the initial admin password, run:
 ```sh
 docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 ```
+
+## 📂 Persistent Data Storage
+
+- The volume (jenkins_data) ensures that Jenkins data, plugins, and jobs are retained even if the container is stopped or removed.
+- No need to reinstall plugins every time you restart the container! 🚀
+
+## 🛠️ Manage Jenkins Container
+
+### Stop Jenkins
+```sh
+docker stop jenkins
+```
+
+### Start Jenkins
+```sh
+docker start jenkins
+```
+
+### Remove Jenkins (without losing data)
+```sh
+docker rm jenkins
+```
+
+## 📌 Useful Commands
+
+### Check Running Containers
+```sh
+docker ps
+```
+
+## List Volumes
+```sh
+docker volume ls
+```
+
+### Remove Volume (if needed)
+```sh
+docker volume rm jenkins_data
+```
+
+## 🏗️ Tech Stack
+### **✅ Docker** – Containerized Jenkins instance
+### **✅ Jenkins** – CI/CD automation tool
+### **✅ Volumes** – Persistent storage
+
+## 💡 Conclusion
+This setup ensures Jenkins runs smoothly inside a Docker container with all configurations and plugins intact. 🚀
+
+Let me know if you have any questions or improvements! 💬
+
+## 🔗 Connect with Me
+🔹 LinkedIn: www.linkedin.com/in/sanket-pawade
+🔹 GitHub: https://github.com/ps9824/Docker_jenkins.git
+
+#DevOps #Jenkins #Docker #CI/CD #Automation
